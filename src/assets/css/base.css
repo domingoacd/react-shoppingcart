@@ -1,0 +1,21 @@
+@font-face {
+  font-family: Roboto;
+  src: '../fonts/Roboto/Roboto-Medium.ttf'
+}
+
+html {
+  /* VARIABLES */
+  --main-font-color: #383838;
+  --white-tone: #fff;
+  --bg-color: #ECECEC;
+  --btn-color: #A700E2;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  color: var(--main-font-color);
+}
