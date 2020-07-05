@@ -1,0 +1,25 @@
+.button {
+  border: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+  color: var(--white-tone);
+  background-color: var(--purple);
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button:focus {
+  outline: none;
+}
+.productBtn {
+  position: absolute;
+  bottom: -1rem;
+  left: 1.9rem;
+  z-index: 2;
+  width: 30%;
+  height: 2.2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 5px rgba(0,0,0,0.4);
+}

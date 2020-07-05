@@ -1,0 +1,31 @@
+.product {
+  position: relative;
+  width: 100%;
+  height: 8rem;
+  max-width: 20rem;
+  display: flex;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  background-color: var(--white-tone);
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.4)
+}
+
+.image {
+  width: 50%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.leftSide {
+  width: 50%;
+  height: 100%;
+  padding: 4% 3%;
+}
+.productName {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+}
+.productPrice {
+  font-size: 0.9rem;
+  font-weight: 300;
+}

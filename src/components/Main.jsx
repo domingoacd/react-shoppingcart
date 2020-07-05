@@ -6,6 +6,7 @@ const Main = () => {
   return (
     <section className={styles.main}>
       <Product />      
+      <Product />      
     </section>
   );
 }
