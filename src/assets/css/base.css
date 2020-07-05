@@ -3,19 +3,30 @@
   src: '../fonts/Roboto/Roboto-Medium.ttf'
 }
 
-html {
-  /* VARIABLES */
-  --main-font-color: #383838;
-  --white-tone: #fff;
-  --bg-color: #ECECEC;
-  --btn-color: #A700E2;
-}
-
+/* VARIABLES */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
-  color: var(--main-font-color);
+  /* color: $main-font-color; */
+}
+
+html {
+  --main-font-color: #383838;
+  --white-tone: #fff;
+  --bg-color: #ECECEC;
+  --purple: #A700E2;
+  --nav-height: 5rem; 
+}
+body {
+  padding: 0 2rem;
+  background-color: var(--bg-color);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
