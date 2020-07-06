@@ -6,17 +6,22 @@
   display: flex;
   border-radius: 12px;
   margin-bottom: 3rem;
+  cursor: pointer;
   background-color: var(--white-tone);
   box-shadow: 0px 3px 5px rgba(0,0,0,0.4)
 }
 
 .image {
-  width: 50%;
+  width: 45%;
+  height: 100%;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .leftSide {
-  width: 50%;
+  width: 55%;
   height: 100%;
   padding: 4% 3%;
 }

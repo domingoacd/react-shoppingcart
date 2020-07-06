@@ -5,6 +5,9 @@ import chihiro from '../assets/images/chihiro.jpg';
 import Button from './Button';
 
 const Product = () => {
+  const imageUrl = {
+    backgroundImage: `url(${totoro})`
+  } 
   return (
     <div className={styles.product}>
       <div className={styles.leftSide}>
@@ -12,7 +15,7 @@ const Product = () => {
         <p className={styles.productPrice}>$1</p>
         <Button style="productBtn" content="Add to cart"/>
       </div>
-      <img src={totoro} alt="" className={styles.image}/>
+      <div className={styles.image} style={imageUrl}></div>
     </div>
   );
 };
