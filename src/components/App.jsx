@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navbar from './Nav';
-import Main from './Main';
-
+import ProductInfo from './ProductInfo';
+import Product from './Product';
+import styles from '../assets/css/main.module.css';
 const App = () => {
+  const [currentProduct, changeCurrentProduct] = useState(false);
   return (
-    <div className="main-container">
+    <div className={styles.mainContainer}>
       <Navbar />
-      <Main />
+      <section className={styles.main}>
+        <Product showProductInfo={changeCurrentProduct}/>
+        <Product showProductInfo={changeCurrentProduct}/>
+        <ProductInfo />
+      </section>
     </div>
   );
 }

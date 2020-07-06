@@ -18,16 +18,10 @@ html {
   --white-tone: #fff;
   --bg-color: #ECECEC;
   --purple: #A700E2;
-  --nav-height: 5rem; 
+  --nav-height: 5rem;
+  --padding-x: 0 2rem;
 }
 body {
-  padding: 0 2rem;
-  background-color: var(--bg-color);
-}
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: var(--main-font-color);
+  background-color: var(--bg-color);
 }

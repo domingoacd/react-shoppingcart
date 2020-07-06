@@ -6,6 +6,7 @@ import backArrow from '../assets/images/back.png';
 const Navbar = () => {
   return (
     <nav className={styles.nav}> 
+    <div className={styles.navWrapper}>
       <button className={styles.btnBack}>
         <img className={styles.image} src={backArrow} alt="Click here to go back"/>
       </button>
@@ -13,6 +14,7 @@ const Navbar = () => {
       <button className={styles.btnOpenCart}>
         <img className={styles.image} src={shopCart} alt="Click here to open shopping cart"/>
       </button>
+    </div>
     </nav>
   )
 }

@@ -1,7 +1,17 @@
+.mainContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--main-font-color);
+}
+
 .main {
+  position: relative;
   width: 100%;
   max-width: 40rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 2%;
 }
