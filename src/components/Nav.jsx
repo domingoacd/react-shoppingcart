@@ -13,6 +13,7 @@ const Navbar = () => {
       <h1 className={styles.mainTitle}>Ghibli</h1>
       <button className={styles.btnOpenCart}>
         <img className={styles.image} src={shopCart} alt="Click here to open shopping cart"/>
+        <span className={`${styles.itemsAmount}`}>1</span>
       </button>
     </div>
     </nav>

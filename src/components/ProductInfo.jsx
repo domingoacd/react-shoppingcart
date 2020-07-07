@@ -6,7 +6,7 @@ import Button from './Button';
 const ProductInfo = ({product, close}) => {
 
   return (
-    <div className={`${styles.container} ${styles.show}`}>
+    <div className={`${styles.container}`}>
       <div className={styles.imageContainer}>
         <img src={totoro} alt="" className={styles.image}/>
         <div className={styles.titleContainer}>

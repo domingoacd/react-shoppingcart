@@ -61,3 +61,24 @@
   font-size: 3rem;
   font-weight: 300;
 }
+
+.itemsAmount {
+  position: absolute;
+  right: -1rem;
+  z-index: 10;
+  width: 1.5rem;
+  height:1.5rem;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 0 0 0.1rem 0rem;
+  border-radius: 50%;
+  color: var(--white-tone);
+  background-color: var(--purple);
+}
+
+.show {
+  visibility: visible;
+}

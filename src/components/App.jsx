@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import Navbar from './Nav';
 import ProductInfo from './ProductInfo';
 import Product from './Product';
+import Cart from './Cart';
 import styles from '../assets/css/main.module.css';
+
 const App = () => {
   const [currentProduct, changeCurrentProduct] = useState(false);
   return (
@@ -12,6 +14,7 @@ const App = () => {
         <Product showProductInfo={changeCurrentProduct}/>
         <Product showProductInfo={changeCurrentProduct}/>
         <ProductInfo />
+        <Cart />
       </section>
     </div>
   );
