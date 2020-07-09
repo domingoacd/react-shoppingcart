@@ -11,15 +11,17 @@ const Purchase = () => {
     <div className={styles.purchase}>
       <div className={styles.left} style={imageUrl}></div>
       <div className={styles.right}>
-        <div className={styles.row}>
-          <h3 className={styles.name}>Totoro</h3>
-          <div className={styles.delete}>
-            <img src={trashCan} className={styles.image} alt="Click here to remove item"/>
+        <div className={styles.topWrapper}>
+          <div className={styles.row}>
+            <h3 className={styles.name}>Totoro</h3>
+            <div className={styles.delete}>
+              <img src={trashCan} className={styles.image} alt="Click here to remove item"/>
+            </div>
           </div>
-        </div>
-        <div className={styles.row}>
-          <p className={styles.quantity}>Quantity</p>
-          <p className={styles.number}>2</p>
+          <div className={styles.row}>
+            <p className={styles.quantity}>Quantity</p>
+            <p className={styles.number}>2</p>
+          </div>
         </div>
         <div className={`${styles.row} ${styles.lastRow}`}>
           <p className={styles.subTotal}>Subtotal</p>
