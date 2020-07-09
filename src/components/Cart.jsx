@@ -3,9 +3,9 @@ import Purchase from './Purchase';
 import Button from './Button';
 import styles from '../assets/css/cart.module.css';
 
-const Cart = () => {
+const Cart = ({show}) => {
   return(
-    <div className={styles.cart}>
+    <div className={`${styles.cart} ${show ? styles.show : ''}`}>
       <h2 className={styles.title}>Your cart</h2>
       <div className={styles.purchaseContainer}>
         <Purchase />
