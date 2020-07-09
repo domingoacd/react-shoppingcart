@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Purchase from './Purchase';
+import Button from './Button';
 import styles from '../assets/css/cart.module.css';
 
 const Cart = () => {
@@ -10,9 +11,10 @@ const Cart = () => {
         <Purchase />
       </div>
       <div className={styles.totalContainer}>
-
+        <p className={styles.totalTitle}>Total</p>
+        <p className={styles.totalAmount}>$4</p>
       </div>
-      
+      <Button content={"Buy"} style={'buyBtn'}/>
     </div>
   );
 }
