@@ -10,9 +10,17 @@
   position: relative;
   width: 100%;
   max-width: 40rem;
+  padding: var(--padding-x);
+  padding-top: 2%;
+}
+
+.productsContainer {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--padding-x);
-  padding-top: 2%;
+}
+
+.hide {
+  display: none;
 }

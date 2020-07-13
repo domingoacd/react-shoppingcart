@@ -12,6 +12,7 @@ const App = () => {
   const [showCart, handleCart] = useState(false);
   const [showModal, handleModal] = useState(false);
   const [products, setProducts] = useState([]);
+  const [cartProducts, setCartProducts] = useState([]);
 
   useEffect(() => {
     api.getMovies().then(movies => {
@@ -30,26 +31,56 @@ const App = () => {
       changeCurrentProduct(false);
     }
   }
+
   function getProducts() {
+    let allProducts = [];
     if (products.length > 0) {
-      return products.map(product => {
-        return <Product 
+      allProducts = products.map(product => 
+         <Product 
           key={product.id} 
           showProductInfo={changeCurrentProduct} 
           info={product}
+          addProduct={addProductToCart}
         />
+      );
+    } else {
+      allProducts = "No movies available.";
+    }
+    return allProducts;
+  }
+
+  function addProductToCart(productId) {
+    const productAlreadyExists = cartProducts.some(product => product.id === productId);
+    let productsList = cartProducts.slice();
+
+    
+    if (productsList.length > 0 && productAlreadyExists) {
+      productsList.forEach(product => {
+        if (product.id === productId) {
+          product.amount++;
+        }
       });
+      setCartProducts(productsList);
+    } else {
+      productsList.push({
+        id: productId,
+        amount: 1
+      });
+      setCartProducts(productsList);
     }
   }
+
   return (
     <div className={styles.mainContainer}>
+      <Modal />
       <Navbar openCart={handleCart} clickBack={goBack}/>
-      <section className={styles.main}>
-        {getProducts()}
+      <section className={`${styles.main}`}>
+        <div className={`${styles.productsContainer} ${currentProduct || showCart ? styles.hide : ''}`}>
+          {getProducts()}
+        </div>
         <ProductInfo product={currentProduct}/>
         <Cart show={showCart}/>
       </section>
-        <Modal />
     </div>
   );
 }
