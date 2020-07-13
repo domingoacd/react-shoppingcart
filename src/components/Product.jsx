@@ -14,7 +14,7 @@ const Product = ({showProductInfo, info, addProduct}) => {
     }
   };
   const imageUrl = {
-    backgroundImage: `url(${totoro})`
+    backgroundImage: `url(./images/${info.image})`
   } 
   return (
     <div className={styles.product} onClick={handleClick}>

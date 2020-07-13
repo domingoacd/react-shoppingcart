@@ -16,7 +16,7 @@
 
 .show {
   width: 100%;
-  padding: var(--padding-x);
+  padding: 0 var(--padding-x);
   padding-bottom: 2rem;
 }
 

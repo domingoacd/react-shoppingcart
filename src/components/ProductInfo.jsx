@@ -8,7 +8,7 @@ const ProductInfo = ({product, addProduct}) => {
   return (
     <div className={`${styles.container} ${product ? styles.show : ''}`}>
       <div className={styles.imageContainer}>
-        <img src={totoro} alt="" className={styles.image}/>
+        <img src={`./images/${product.image}`} alt="" className={styles.image}/>
         <div className={styles.titleContainer}>
           <div className={styles.leftSide}>
             <h2 className={styles.title}>{product.title}</h2>

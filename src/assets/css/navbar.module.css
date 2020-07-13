@@ -1,4 +1,7 @@
 .nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -6,6 +9,7 @@
   background-color: var(--test);
   height: var(--nav-height);
   margin-bottom: 3rem;
+  background-color: var(--bg-color);
 }
 
 .navWrapper {

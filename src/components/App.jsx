@@ -32,22 +32,6 @@ const App = () => {
     }
   }
 
-  function getProducts() {
-    let allProducts = [];
-    if (products.length > 0) {
-      allProducts = products.map(product => 
-         <Product 
-          key={product.id} 
-          showProductInfo={changeCurrentProduct} 
-          info={product}
-          addProduct={addProductToCart}
-        />
-      );
-    } else {
-      allProducts = "No movies available.";
-    }
-    return allProducts;
-  }
   function removeProductFromCart(productId) {
     const newCartProducts = cartProducts.slice();
     const productIndex = newCartProducts.findIndex(product => product.id === productId);
@@ -87,6 +71,23 @@ const App = () => {
     }
   }
 
+  function getProducts() {
+    let allProducts = [];
+    if (products.length > 0) {
+      allProducts = products.map(product =>
+        <Product
+          key={product.id}
+          showProductInfo={changeCurrentProduct}
+          info={product}
+          addProduct={addProductToCart}
+        />
+      );
+    } else {
+      allProducts = "No movies available.";
+    }
+    return allProducts;
+  }
+  
   return (
     <div className={styles.mainContainer}>
       <Modal />

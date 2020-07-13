@@ -6,7 +6,7 @@ import totoro from '../assets/images/totoro.jpg';
 const Purchase = ({purchaseData, deleteProduct}) => {
   const [hide, hidePurchase] = useState(false);
   const imageUrl = {
-    backgroundImage: `url(${totoro})`
+    backgroundImage: `url(./images/${purchaseData.image})`
   } 
 
   function handleClick(e) {
