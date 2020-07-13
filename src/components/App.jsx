@@ -15,11 +15,11 @@ const App = () => {
   const [cartProducts, setCartProducts] = useState([]);
 
   useEffect(() => {
-    api.getMovies().then(movies => {
-      if (movies.length > 0) {
-        setProducts(movies.slice(0, 11));
-      }
-    });
+    const fetchMovies = async () => {
+      setProducts(await api.getMovies());
+    }
+
+    fetchMovies();
   }, []);
   
   function goBack() {
@@ -48,22 +48,39 @@ const App = () => {
     }
     return allProducts;
   }
-
-  function addProductToCart(productId) {
-    const productAlreadyExists = cartProducts.some(product => product.id === productId);
-    let productsList = cartProducts.slice();
-
+  function removeProductFromCart(productId) {
+    const newCartProducts = cartProducts.slice();
+    const productIndex = newCartProducts.findIndex(product => product.id === productId);
     
+    if (newCartProducts[productIndex].amount === 1) {
+      setTimeout(() => {
+        newCartProducts.splice(productIndex, 1);
+        setCartProducts(newCartProducts);
+      }, 500);
+    } else {
+      newCartProducts[productIndex].amount--;
+      setCartProducts(newCartProducts);
+    }
+
+  }
+
+  function addProductToCart(product) {
+    const productAlreadyExists = 
+      cartProducts.some(carProduct => carProduct.id === product.id);
+    let productsList = cartProducts.slice();
     if (productsList.length > 0 && productAlreadyExists) {
-      productsList.forEach(product => {
-        if (product.id === productId) {
-          product.amount++;
+      productsList.forEach(cartProduct => {
+        if (cartProduct.id === product.id) {
+          cartProduct.amount++;
         }
       });
       setCartProducts(productsList);
     } else {
       productsList.push({
-        id: productId,
+        id: product.id,
+        title: product.title,
+        cost: product.cost,
+        image: product.image,
         amount: 1
       });
       setCartProducts(productsList);
@@ -82,8 +99,12 @@ const App = () => {
         <div className={`${styles.productsContainer} ${currentProduct || showCart ? styles.hide : ''}`}>
           {getProducts()}
         </div>
-        <ProductInfo product={currentProduct}/>
-        <Cart show={showCart}/>
+        <ProductInfo product={currentProduct} addProduct={addProductToCart}/>
+        <Cart 
+          show={showCart} 
+          productsInCart={cartProducts} 
+          removeProduct={removeProductFromCart}
+        />
       </section>
     </div>
   );

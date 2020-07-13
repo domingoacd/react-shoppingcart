@@ -3,7 +3,7 @@ import styles from '../assets/css/productInfo.module.css';
 import totoro from '../assets/images/totoro.jpg';
 import Button from './Button';
 
-const ProductInfo = ({product, close}) => {
+const ProductInfo = ({product, addProduct}) => {
 
   return (
     <div className={`${styles.container} ${product ? styles.show : ''}`}>
@@ -15,7 +15,7 @@ const ProductInfo = ({product, close}) => {
             <p className={styles.price}>$1</p>
           </div>
           <div className={styles.rightSide}>
-            <Button content="Add to cart" style="productInfoBtn"/>
+            <Button content="Add to cart" style="productInfoBtn" clickEvent={addProduct} parentProduct={product}/>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from '../assets/css/navbar.module.css';
 import shopCart from '../assets/images/cart.png';
 import backArrow from '../assets/images/back.png';
@@ -19,8 +19,6 @@ const Navbar = ({openCart, clickBack, productsInCart}) => {
     return amount
   }
 
-  
-  
   return (
     <nav className={styles.nav}> 
     <div className={styles.navWrapper}>

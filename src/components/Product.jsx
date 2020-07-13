@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from '../assets/css/product.module.css';
 import totoro from '../assets/images/totoro.jpg';
 import chihiro from '../assets/images/chihiro.jpg';
 import Button from './Button';
 
 const Product = ({showProductInfo, info, addProduct}) => {
+
   const handleClick = (e) => {
     const targetClicked = e.target.nodeName;
 
@@ -24,7 +25,7 @@ const Product = ({showProductInfo, info, addProduct}) => {
           style="productBtn" 
           content="Add to cart" 
           clickEvent={addProduct} 
-          productId={info.id}
+          parentProduct={info}
         />
       </div>
       <div className={styles.image} style={imageUrl}></div>
