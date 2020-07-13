@@ -73,7 +73,11 @@ const App = () => {
   return (
     <div className={styles.mainContainer}>
       <Modal />
-      <Navbar openCart={handleCart} clickBack={goBack}/>
+      <Navbar 
+        openCart={handleCart} 
+        clickBack={goBack} 
+        productsInCart={cartProducts}
+      />
       <section className={`${styles.main}`}>
         <div className={`${styles.productsContainer} ${currentProduct || showCart ? styles.hide : ''}`}>
           {getProducts()}
