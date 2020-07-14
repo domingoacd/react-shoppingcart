@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/domingoacd.github.io/react-shoppingcart/static/css/main.a92f8d64.chunk.css",
+    "main.js": "/domingoacd.github.io/react-shoppingcart/static/js/main.3453db20.chunk.js",
+    "main.js.map": "/domingoacd.github.io/react-shoppingcart/static/js/main.3453db20.chunk.js.map",
+    "runtime-main.js": "/domingoacd.github.io/react-shoppingcart/static/js/runtime-main.a2a43d6b.js",
+    "runtime-main.js.map": "/domingoacd.github.io/react-shoppingcart/static/js/runtime-main.a2a43d6b.js.map",
+    "static/js/2.f9d28821.chunk.js": "/domingoacd.github.io/react-shoppingcart/static/js/2.f9d28821.chunk.js",
+    "static/js/2.f9d28821.chunk.js.map": "/domingoacd.github.io/react-shoppingcart/static/js/2.f9d28821.chunk.js.map",
+    "index.html": "/domingoacd.github.io/react-shoppingcart/index.html",
+    "precache-manifest.bb52b52b843b6d8f5a61eca1d38a82ec.js": "/domingoacd.github.io/react-shoppingcart/precache-manifest.bb52b52b843b6d8f5a61eca1d38a82ec.js",
+    "service-worker.js": "/domingoacd.github.io/react-shoppingcart/service-worker.js",
+    "static/css/main.a92f8d64.chunk.css.map": "/domingoacd.github.io/react-shoppingcart/static/css/main.a92f8d64.chunk.css.map",
+    "static/js/2.f9d28821.chunk.js.LICENSE.txt": "/domingoacd.github.io/react-shoppingcart/static/js/2.f9d28821.chunk.js.LICENSE.txt",
+    "static/media/chihiro.jpg": "/domingoacd.github.io/react-shoppingcart/static/media/chihiro.d39fe1ab.jpg",
+    "static/media/totoro.jpg": "/domingoacd.github.io/react-shoppingcart/static/media/totoro.d63cb8f7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2a43d6b.js",
+    "static/js/2.f9d28821.chunk.js",
+    "static/css/main.a92f8d64.chunk.css",
+    "static/js/main.3453db20.chunk.js"
+  ]
+}
