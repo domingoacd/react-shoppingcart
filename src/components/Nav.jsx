@@ -3,12 +3,13 @@ import styles from '../assets/css/navbar.module.css';
 import shopCart from '../assets/images/cart.png';
 import backArrow from '../assets/images/back.png';
 
-const Navbar = ({openCart, clickBack, productsInCart}) => {
+const Navbar = ({openCart, clickBack, productsInCart, showArrow}) => {
 
   const showCounter = () => productsInCart.length > 0 ? true : false ;
   
   function showCart() {
     openCart(true);
+    window.scrollTo(0,0);
   }
   
   function getAmountOfProducts() {
@@ -22,7 +23,7 @@ const Navbar = ({openCart, clickBack, productsInCart}) => {
   return (
     <nav className={styles.nav}> 
     <div className={styles.navWrapper}>
-      <button className={styles.btnBack} onClick={clickBack}>
+      <button className={`${styles.btnBack} ${showArrow ? styles.show : ''}`} onClick={clickBack}>
         <img className={styles.image} src={backArrow} alt="Click here to go back"/>
       </button>
       <h1 className={styles.mainTitle}>Ghibli</h1>

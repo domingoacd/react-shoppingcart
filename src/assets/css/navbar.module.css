@@ -45,6 +45,7 @@
 .btnBack {
   width: 2rem;
   height: 2rem;
+  visibility: hidden;
 }
 
 

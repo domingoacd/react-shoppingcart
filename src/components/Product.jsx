@@ -10,9 +10,11 @@ const Product = ({showProductInfo, info, addProduct}) => {
     const targetClicked = e.target.nodeName;
 
     if (targetClicked !== 'BUTTON') {
-      showProductInfo(info)
+      showProductInfo(info);
+      window.scrollTo(0,0);
     }
   };
+
   const imageUrl = {
     backgroundImage: `url(./images/${info.image})`
   } 

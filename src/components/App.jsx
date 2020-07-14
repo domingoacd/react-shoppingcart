@@ -102,6 +102,7 @@ const App = () => {
         openCart={handleCart} 
         clickBack={goBack} 
         productsInCart={cartProducts}
+        showArrow={currentProduct || showCart || showModal}
       />
       <section className={`${styles.main}`}>
         <div className={`${styles.productsContainer} ${currentProduct || showCart ? styles.hide : ''}`}>
