@@ -3,7 +3,7 @@ import Purchase from './Purchase';
 import Button from './Button';
 import styles from '../assets/css/cart.module.css';
 
-const Cart = ({show, productsInCart, removeProduct}) => {
+const Cart = ({show, productsInCart, removeProduct, openModal}) => {
   const [total, changeTotal] = useState(0);
 
   function getTotal() {
@@ -33,7 +33,7 @@ const Cart = ({show, productsInCart, removeProduct}) => {
         <p className={styles.totalTitle}>Total</p>
         <p className={styles.totalAmount}>${getTotal()}</p>
       </div>
-      <Button content={"Buy"} style={'buyBtn'}/>
+      <Button content={"Buy"} style={'buyBtn'} clickEvent={openModal}/>
     </div>
   );
 }

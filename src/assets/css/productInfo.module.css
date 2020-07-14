@@ -3,12 +3,12 @@
   top: 0;
   right: 0;
   z-index: 10;
-  width: 0;
+  width: 0%;
   height: max-content;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
   overflow: hidden;
   transition: width 0.5s;
   background-color: var(--bg-color);
@@ -16,7 +16,7 @@
 
 .show {
   width: 100%;
-  padding: 0 var(--padding-x);
+  padding: var(--padding-x);
   padding-bottom: 2rem;
 }
 

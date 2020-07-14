@@ -32,6 +32,13 @@ const App = () => {
     }
   }
 
+  function openModal() {
+    handleModal(true);
+  }
+  function closeModal() {
+    handleModal(false);
+  }
+
   function removeProductFromCart(productId) {
     const newCartProducts = cartProducts.slice();
     const productIndex = newCartProducts.findIndex(product => product.id === productId);
@@ -90,7 +97,7 @@ const App = () => {
   
   return (
     <div className={styles.mainContainer}>
-      <Modal />
+      <Modal show={showModal} hide={closeModal}/>
       <Navbar 
         openCart={handleCart} 
         clickBack={goBack} 
@@ -105,6 +112,7 @@ const App = () => {
           show={showCart} 
           productsInCart={cartProducts} 
           removeProduct={removeProductFromCart}
+          openModal={openModal}
         />
       </section>
     </div>
